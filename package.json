@@ -1,0 +1,18 @@
+{
+  "name": "maheshravirala-resume",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxi generate",
+    "start": "nuxt start",
+    "lint": "eslint . --ext .js,.ts,.vue"
+  },
+  "dependencies": {
+    "nuxt": "^3.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0"
+  }
+}

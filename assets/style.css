@@ -1,0 +1,20 @@
+:root{
+  --bg:#fff; --card:#f7f8fb; --text:#0f1724; --muted:#6b7280; --accent:#0ea5a4;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+}
+[data-theme="dark"]{
+  --bg:#071022; --card:#071827; --text:#e6eef6; --muted:#9fb3c8; --accent:#06b6d4;
+}
+html,body{margin:0;background:var(--bg);color:var(--text);font-size:16px}
+.container{max-width:1100px;margin:0 auto;padding:28px}
+.site-header{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid rgba(0,0,0,0.06)}
+.top-nav a{margin:0 8px;color:var(--muted);text-decoration:none}
+.btn{background:var(--accent);color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none}
+.card{background:var(--card);padding:16px;border-radius:12px}
+.section{padding:28px 0;border-top:1px solid rgba(0,0,0,0.04)}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+@media print{
+  .top-nav, button, .cta { display:none !important }
+  body{background:#fff;color:#000}
+  .container{padding:8px}
+}
