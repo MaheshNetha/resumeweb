@@ -1,4 +1,4 @@
-import { defineNuxtConfig } from 'nuxt'
+import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
   ssr: false, // SPA mode for GitHub Pages; set true if you prefer full SSR on other hosts
@@ -15,7 +15,7 @@ export default defineNuxtConfig({
       ]
     }
   },
-  css: ['~/assets/styles.css'],
+  css: ['~/assets/style.css'],
   build: {
     transpile: []
   },

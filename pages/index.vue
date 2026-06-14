@@ -84,18 +84,16 @@
     <footer class="site-footer container">
       <small>© {{ year }} Mahesh Ravirala — Built with Nuxt 3</small>
     </footer>
-
-    <script type="application/ld+json" v-html="jsonLd"></script>
   </main>
 </template>
 
 <script setup lang="ts">
-import { useRuntimeConfig } from '#imports'
+import { useRuntimeConfig, useHead } from '#imports'
 import Header from '~/components/Header.vue'
 import ProjectCard from '~/components/ProjectCard.vue'
 const config = useRuntimeConfig()
 const name = 'Mahesh Ravirala'
-const role = 'Software Developer — Vue · JavaScript · Node.js'
+const role = 'Senior Software Developer — Vue · JavaScript · Node.js'
 const summary = 'Highly-skilled and motivated senior software engineer with 3+ years of experience in web and installable application development. Enhanced performance of applications using the latest web technologies.'
 const year = new Date().getFullYear()
 
@@ -103,10 +101,16 @@ const jsonLd = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "Person",
   "name": name,
-  "jobTitle": "Software Developer",
+  "jobTitle": "Senior Software Developer",
   "url": config.public.portfolio,
   "email": `mailto:${config.public.email}`,
   "telephone": config.public.phone,
   "sameAs": [config.public.portfolio]
+})
+
+useHead({
+  script: [
+    { type: 'application/ld+json', children: jsonLd }
+  ]
 })
 </script>
