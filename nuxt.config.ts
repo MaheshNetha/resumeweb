@@ -1,13 +1,12 @@
 import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
-  ssr: false, // SPA mode for GitHub Pages; set true if you prefer full SSR on other hosts
-  target: 'static', // ensures generate works as expected
-  nitro: {
-    preset: 'static'
-  },
+  ssr: false,
+  target: 'static',
+  nitro: { preset: 'static' },
+
   app: {
-    baseURL: '/', // GitHub Pages will serve from root of gh-pages branch
+    baseURL: '/resumeweb/',
     head: {
       title: 'Mahesh Ravirala — Software Developer',
       meta: [
@@ -15,13 +14,11 @@ export default defineNuxtConfig({
       ]
     }
   },
+
   css: ['~/assets/style.css'],
-  build: {
-    transpile: []
-  },
-  generate: {
-    dir: 'dist' // explicit output directory used by the workflow
-  },
+  build: { transpile: [] },
+  generate: { dir: 'dist' },
+
   runtimeConfig: {
     public: {
       email: 'ravirala444@gmail.com',
